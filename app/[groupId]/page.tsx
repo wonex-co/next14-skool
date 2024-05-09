@@ -25,9 +25,6 @@ const Community = ({ params }: ChatPageProps) => {
         return <div>Loading...</div>;
     }
 
-    if (!group?.endsOn || group?.endsOn < Date.now()) {
-        return <div>Subscription expired.</div>;
-    }
 
 
 

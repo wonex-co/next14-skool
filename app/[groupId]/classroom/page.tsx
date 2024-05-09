@@ -13,9 +13,7 @@ interface ClassroomProps {
 
 const ClassroomPage = ({ params }: ClassroomProps) => {
     const group = useQuery(api.groups.get, { id: params.groupId })
-    if (!group?.endsOn || group?.endsOn < Date.now()) {
-        return <div>Subscription expired.</div>;
-    }
+
     return (
         <div className="py-6">
             <CourseList groupId={params.groupId} />
