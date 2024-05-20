@@ -25,9 +25,6 @@ const Community = ({ params }: ChatPageProps) => {
         return <div>Loading...</div>;
     }
 
-
-
-
     if (group === null) {
         router.push("/");
         return
