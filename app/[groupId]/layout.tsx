@@ -1,5 +1,6 @@
-import { Navbar } from "@/components/navbar";
-import { GroupNavbar } from "./_components/group-navbar";
+import { Navbar } from '@/components/navbar';
+
+import { GroupNavbar } from './_components/group-navbar';
 
 interface ChatLayoutProps {
     children: React.ReactNode;

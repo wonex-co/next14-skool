@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
     Dialog,
     DialogClose,
@@ -7,12 +7,11 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { api } from "@/convex/_generated/api";
-import { useApiMutation } from "@/hooks/use-api-mutation";
-import { useState } from "react";
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { api } from '@/convex/_generated/api';
+import { useApiMutation } from '@/hooks/use-api-mutation';
+import { useState } from 'react';
 
 interface CreatePostModalProps {
     groupId: string;
@@ -49,17 +48,17 @@ export const CreatePostModal = ({
         <div className="w-full">
             <Dialog>
                 <DialogTrigger className="flex w-full justify-start">
-                    <div className="w-full shadow-[1px_1px_2px_2px_rgba(0,0,0,0.2)] p-4 text-neutral-500 rounded-md bg-white font-semibold text-md text-start px-6">Write something</div>
+                    <div className="w-full shadow-[1px_1px_2px_2px_rgba(0,0,0,0.2)] p-4 text-neutral-500 rounded-md bg-white font-semibold text-md text-start px-6">Escreva alguma coisa</div>
                 </DialogTrigger>
                 <DialogContent>
                     <DialogHeader>
-                        <DialogTitle>Create a post</DialogTitle>
+                        <DialogTitle>Crie um post</DialogTitle>
                         <DialogDescription>
-                            Share your thoughts with the community
+                            Compartilhe seus pensamentos com a comunidade
                         </DialogDescription>
                     </DialogHeader>
                     <Input
-                        placeholder="Title"
+                        placeholder="Título"
                         className="ring-0 rounded-xl bg-inherit placeholder:text-neutral-600 h-12"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
@@ -76,7 +75,7 @@ export const CreatePostModal = ({
                                 className="w-full"
                                 variant={"secondary"}
                             >
-                                Cancel
+                                Cancelar
                             </Button>
                         </DialogClose>
                         <DialogClose asChild>
@@ -86,7 +85,7 @@ export const CreatePostModal = ({
                                 className="w-full"
                                 onKeyDown={handleKeyDown}
                             >
-                                Create
+                                Criar
                             </Button>
                         </DialogClose>
                     </div>

@@ -1,9 +1,7 @@
-"use client";
+import { Id } from '@/convex/_generated/dataModel';
 
-import { Id } from "@/convex/_generated/dataModel";
-import { CourseList } from "./_components/course-list";
-import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
+import { CourseList } from './_components/course-list';
+
 
 interface ClassroomProps {
     params: {
@@ -12,7 +10,6 @@ interface ClassroomProps {
 };
 
 const ClassroomPage = ({ params }: ClassroomProps) => {
-    const group = useQuery(api.groups.get, { id: params.groupId })
 
     return (
         <div className="py-6">

@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Id } from "@/convex/_generated/dataModel";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { Button } from '@/components/ui/button';
+import { Id } from '@/convex/_generated/dataModel';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface CourseCardProps {
     title: string;
@@ -34,7 +34,7 @@ export const CourseCard = ({
             <div className="flex flex-col h-[140px] justify-start p-3">
                 <h3 className="font-bold">{title}</h3>
                 <p className="">{description}</p>
-                <Button variant={"ghost"} className="w-full mt-auto">Open</Button>
+                <Button variant={"ghost"} className="w-full mt-auto">Abrir</Button>
             </div>
         </div>
     );

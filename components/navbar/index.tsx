@@ -1,6 +1,6 @@
-import { UserButton } from "@clerk/nextjs"
-import { Logo } from "../logo"
-import { SelectModal } from "./select-modal"
+import { UserButton } from '@clerk/nextjs';
+
+import { SelectModal } from './select-modal';
 
 export const Navbar = () => {
     return (

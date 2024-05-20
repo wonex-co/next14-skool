@@ -1,13 +1,15 @@
 "use client";
 
-import { api } from "@/convex/_generated/api";
-import { Id } from "@/convex/_generated/dataModel";
-import { useQuery } from "convex/react";
-import { useRouter } from "next/navigation";
-import { GroupNavbar } from "./_components/group-navbar";
-import { CreatePostModal } from "./_components/create-post-modal";
-import { AboutSide } from "@/components/about-side";
-import { Post } from "./_components/post-modal";
+import { AboutSide } from '@/components/about-side';
+import { api } from '@/convex/_generated/api';
+import { Id } from '@/convex/_generated/dataModel';
+import { useQuery } from 'convex/react';
+import { useRouter } from 'next/navigation';
+
+import { CreatePostModal } from './_components/create-post-modal';
+import { Post } from './_components/post-modal';
+
+
 
 interface ChatPageProps {
     params: {

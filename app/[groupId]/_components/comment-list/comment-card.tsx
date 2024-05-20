@@ -1,10 +1,10 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { api } from "@/convex/_generated/api";
-import { Doc } from "@/convex/_generated/dataModel";
-import { useApiMutation } from "@/hooks/use-api-mutation";
-import { useQuery } from "convex/react";
-import { formatDistanceToNow } from "date-fns";
-import { Trash2 } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { api } from '@/convex/_generated/api';
+import { Doc } from '@/convex/_generated/dataModel';
+import { useApiMutation } from '@/hooks/use-api-mutation';
+import { useQuery } from 'convex/react';
+import { formatDistanceToNow } from 'date-fns';
+import { Trash2 } from 'lucide-react';
 
 interface CommentCardProps {
     comment: Doc<"comments">;

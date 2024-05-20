@@ -1,10 +1,12 @@
 "use client";
+import { api } from '@/convex/_generated/api';
+import { Id } from '@/convex/_generated/dataModel';
+import { useQuery } from 'convex/react';
 
-import { api } from "@/convex/_generated/api";
-import { Id } from "@/convex/_generated/dataModel";
-import { useQuery } from "convex/react";
-import { MemberCard } from "./_components/member-card";
-import { AddMember } from "./_components/add-member";
+import { AddMember } from './_components/add-member';
+import { MemberCard } from './_components/member-card';
+
+
 
 interface MebersPageProps {
     params: {

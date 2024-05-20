@@ -1,26 +1,16 @@
-import { Avatar } from "@/components/ui/avatar";
-import { Separator } from "@/components/ui/separator";
-import { api } from "@/convex/_generated/api";
-import { Doc } from "@/convex/_generated/dataModel";
-import { useApiMutation } from "@/hooks/use-api-mutation";
-import { cn } from "@/lib/utils";
-import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import { useMutation, useQuery } from "convex/react";
-import {
-    formatDistanceToNow
-} from 'date-fns';
-import { MessageSquare, PenBox, ThumbsUp, Trash2 } from "lucide-react";
-import { Content } from "../../../components/content";
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useEffect } from "react";
+import { Avatar } from '@/components/ui/avatar';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Separator } from '@/components/ui/separator';
+import { api } from '@/convex/_generated/api';
+import { Doc } from '@/convex/_generated/dataModel';
+import { useApiMutation } from '@/hooks/use-api-mutation';
+import { AvatarFallback, AvatarImage } from '@radix-ui/react-avatar';
+import { useQuery } from 'convex/react';
+import { formatDistanceToNow } from 'date-fns';
+import { MessageSquare, PenBox, ThumbsUp, Trash2 } from 'lucide-react';
+
+import { Content } from '../../../components/content';
 
 
 interface PostCardProps {
@@ -59,13 +49,12 @@ export const PostCard = ({
 
     const handleAttackToLesson = () => {
         <Dialog>
-            <DialogTrigger>Open</DialogTrigger>
+            <DialogTrigger>Abrir</DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Are you absolutely sure?</DialogTitle>
+                    <DialogTitle>Você tem certeza?</DialogTitle>
                     <DialogDescription>
-                        This action cannot be undone. This will permanently delete your account
-                        and remove your data from our servers.
+                        A ação não pode ser desfeita. Isso vai deletar permanentemente sua conta e remover seus dados dos nossos servers. T
                     </DialogDescription>
                 </DialogHeader>
             </DialogContent>
@@ -101,7 +90,7 @@ export const PostCard = ({
                 <Content
                     postId={post._id}
                     initialContent={post.content}
-                    editable={isOwner && true}
+                    editable={isOwner}
                     className="text-wrap max-w-screen-md my-2"
                 />
             </ScrollArea>

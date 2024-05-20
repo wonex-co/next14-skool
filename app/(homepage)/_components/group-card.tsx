@@ -1,6 +1,6 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Doc } from "@/convex/_generated/dataModel";
-import { useRouter } from "next/navigation";
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Doc } from '@/convex/_generated/dataModel';
+import { useRouter } from 'next/navigation';
 
 interface GroupCardProps {
     group: Doc<"groups">;

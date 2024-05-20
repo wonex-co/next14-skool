@@ -1,6 +1,7 @@
-import { Lock } from "lucide-react";
-import { Button } from "./ui/button";
-import { Doc } from "@/convex/_generated/dataModel";
+import { Doc } from '@/convex/_generated/dataModel';
+import { Lock } from 'lucide-react';
+
+import { Button } from './ui/button';
 
 interface AboutSideProps {
     group: Doc<"groups">;
@@ -18,14 +19,14 @@ export const AboutSide = ({
     return (
         <div className="max-w-[350px] w-full bg-white space-y-4 p-8 rounded-lg border border-neutral-200">
             <h1 className="font-bold text-xl">{group.name}</h1>
-            <p className="flex font-light text-xs items-center text-neutral-400 gap-x-2"><Lock className="w-4 h-4" /> Private group</p>
+            <p className="flex font-light text-xs items-center text-neutral-400 gap-x-2"><Lock className="w-4 h-4" /> Comunidade privada</p>
             <p>{group.shortDescription}</p>
             <p className="text-neutral-400">{group.memberNumber} {membersText}</p>
             {currentUser?._id !== group.ownerId && (
-                <Button className="w-full">Join</Button>
+                <Button className="w-full">Entrar</Button>
             )}
             {currentUser?._id === group.ownerId && (
-                <Button className="w-full" variant={"secondary"} onClick={handleEdit}>Edit</Button>
+                <Button className="w-full" variant={"secondary"} onClick={handleEdit}>Editar</Button>
             )}
 
         </div>

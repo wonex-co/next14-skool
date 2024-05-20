@@ -1,11 +1,11 @@
-import { Doc, Id } from "@/convex/_generated/dataModel";
-import { CommentCard } from "./comment-card";
-import { Input } from "@/components/ui/input";
-import { CommentInput } from "./comment-input";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useEffect, useRef } from "react";
-import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { api } from '@/convex/_generated/api';
+import { Doc } from '@/convex/_generated/dataModel';
+import { useQuery } from 'convex/react';
+import { useEffect, useRef } from 'react';
+
+import { CommentCard } from './comment-card';
+import { CommentInput } from './comment-input';
 
 interface CommentListProps {
     post: Doc<"posts"> & {

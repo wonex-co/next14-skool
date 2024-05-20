@@ -2,18 +2,12 @@
 
 import { api } from "@/convex/_generated/api"
 import { useQuery } from "convex/react"
-import { ChevronDown, Compass, Plus, Sparkles, Zap } from "lucide-react";
-
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover"
+import { ChevronDown, Compass, Plus } from "lucide-react";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Id } from "@/convex/_generated/dataModel";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { Loading } from "../auth/loading";
 import { Logo } from "../logo";
 
 
@@ -32,7 +26,7 @@ export const SelectModal = () => {
     }
 
     if (currentUser === null) {
-        return <div>User Not Found</div>;
+        return <div>Usuário não encontrado</div>;
     }
 
     if (group === undefined) {
@@ -84,11 +78,11 @@ export const SelectModal = () => {
                 <PopoverContent className="flex flex-col border-0 p-3 space-y-4 font-semibold" align="center">
                     <div className="flex gap-x-2 items-center cursor-pointer hover:bg-zinc-100 p-2 rounded-md" onClick={handleCreate}>
                         <Plus className="w-7 h-7" />
-                        <p>Create a group</p>
+                        <p>Criar uma comunidade</p>
                     </div>
                     <div className="flex gap-x-2 items-center cursor-pointer hover:bg-zinc-100 p-2 rounded-md" onClick={handleDiscover}>
                         <Compass className="w-7 h-7" />
-                        <p>Discover groups</p>
+                        <p>Descobrir comuinidades</p>
                     </div>
                     {groups?.map((group) => (
                         <div className="flex gap-x-2 items-center cursor-pointer hover:bg-zinc-100 p-2 rounded-md" key={group._id} onClick={() => handleSelect(group._id)}>

@@ -1,10 +1,10 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { api } from "@/convex/_generated/api";
-import { Doc, Id } from "@/convex/_generated/dataModel";
-import { useQuery } from "convex/react";
-import { useParams } from "next/navigation";
-import { format } from "date-fns";
-import { Calendar } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { api } from '@/convex/_generated/api';
+import { Doc, Id } from '@/convex/_generated/dataModel';
+import { useQuery } from 'convex/react';
+import { format } from 'date-fns';
+import { Calendar } from 'lucide-react';
+import { useParams } from 'next/navigation';
 
 interface MemberCardProps {
     member: Doc<"users">;
@@ -33,7 +33,7 @@ export const MemberCard = ({
                 <p className="">{member.about}</p>
                 <div className="flex space-x-3 items-center text-neutral-600">
                     <Calendar className="w-4 h-4" />
-                    <span className=" text-sm">Joined {formattedDate}</span>
+                    <span className=" text-sm">Ingressou {formattedDate}</span>
                 </div>
             </div>
         </div>

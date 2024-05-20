@@ -1,17 +1,13 @@
 "use client";
+import '@blocknote/core/fonts/inter.css';
+import '@blocknote/react/style.css';
 
-import { api } from "@/convex/_generated/api";
-import { Id } from "@/convex/_generated/dataModel";
-import { Block } from "@blocknote/core";
-import "@blocknote/core/fonts/inter.css";
-import { BlockNoteView, useCreateBlockNote } from "@blocknote/react";
-import "@blocknote/react/style.css";
-import { useMutation } from "convex/react";
-import { AlertOctagon } from "lucide-react";
-import { toast } from "sonner";
-import { useState } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { AnyMxRecord } from "dns";
+import { api } from '@/convex/_generated/api';
+import { Id } from '@/convex/_generated/dataModel';
+import { BlockNoteView, useCreateBlockNote } from '@blocknote/react';
+import { useMutation } from 'convex/react';
+import { AlertOctagon } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface DescriptionEditorProps {
     groupId: Id<"groups">;

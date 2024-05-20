@@ -1,6 +1,6 @@
-import { Doc } from "@/convex/_generated/dataModel";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { CaseSensitive, Text } from "lucide-react";
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Doc } from '@/convex/_generated/dataModel';
+import { CaseSensitive, Text } from 'lucide-react';
 
 interface LessonViewProps {
     lesson: Doc<"lessons">;

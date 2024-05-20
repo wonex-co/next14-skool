@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { api } from "@/convex/_generated/api";
-import { Id } from "@/convex/_generated/dataModel";
-import { useMutation } from "convex/react";
-import { useState } from "react";
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { api } from '@/convex/_generated/api';
+import { Id } from '@/convex/_generated/dataModel';
+import { useMutation } from 'convex/react';
+import { useState } from 'react';
 
 interface CommentInputProps {
     postId: Id<"posts">;
@@ -30,12 +30,12 @@ export const CommentInput = ({
     return (
         <div className="flex w-full items-center gap-x-2">
             <Input
-                placeholder="Write a comment..."
+                placeholder="Escreva um comentário.."
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
                 onKeyDown={handleKeyDown}
             />
-            <Button variant={"secondary"} onClick={handleAdd}>Add comment</Button>
+            <Button variant={"secondary"} onClick={handleAdd}>Adicione um comentário</Button>
         </div>
     );
 }
