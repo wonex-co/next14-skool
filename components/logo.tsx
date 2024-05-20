@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface LogoProps {
     className?: string;
@@ -12,11 +13,7 @@ export const Logo = ({
 }: LogoProps) => {
     return (
         <div className={cn("cursor-pointer font-bold text-5xl" && className)}>
-            <span className="text-red-500">s</span>
-            <span className="text-blue-500">k</span>
-            <span className="text-green-500">u</span>
-            <span className="text-yellow-500">u</span>
-            <span className="text-purple-500">l</span>
+            <Image width={150} height={60} src="/logo.svg" alt="REKREIO" objectFit="cover" />
         </div>
     );
 }
