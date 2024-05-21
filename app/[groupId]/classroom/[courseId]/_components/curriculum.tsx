@@ -36,7 +36,7 @@ export const Curriculum = ({ course, groupId }: CurriculumProps) => {
                 {isOwner && (
                     <Button onClick={handleEditClick} variant={"secondary"} className="text-zinc-600 text-sm space-x-3 mb-10">
                         <Pen className="w-4 h-4" />
-                        <p>Edite curso</p>
+                        <p>Editar Curso</p>
                     </Button>
                 )}
                 <div className="flex items-center mb-6 space-x-3">
