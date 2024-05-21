@@ -1,11 +1,12 @@
 "use client";
 
-import { api } from "@/convex/_generated/api";
-import { Id } from "@/convex/_generated/dataModel";
-import { useQuery } from "convex/react";
-import { CourseCard } from "./course-card";
-import { useRouter } from "next/navigation";
-import { Plus } from "lucide-react";
+import { api } from '@/convex/_generated/api';
+import { Id } from '@/convex/_generated/dataModel';
+import { useQuery } from 'convex/react';
+import { Plus } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+
+import { CourseCard } from './course-card';
 
 interface CourseListProps {
     groupId: Id<"groups">;

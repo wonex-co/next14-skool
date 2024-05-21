@@ -1,10 +1,10 @@
-import { Loading } from "@/components/auth/loading";
-import { api } from "@/convex/_generated/api";
-import { useMutation, useQuery } from "convex/react";
-import { GroupCard } from "./group-card";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { Loading } from '@/components/auth/loading';
+import { Button } from '@/components/ui/button';
+import { api } from '@/convex/_generated/api';
+import { useQuery } from 'convex/react';
+import { useRouter } from 'next/navigation';
+
+import { GroupCard } from './group-card';
 
 export const GroupList = () => {
     const groups = useQuery(api.groups.listAll, {});
@@ -20,7 +20,7 @@ export const GroupList = () => {
 
     if (groups.length === 0) {
         return <div className="h-full flex items-cente justify-center">
-            <Button onClick={handleCreate}>Create a group</Button>
+            <Button onClick={handleCreate}>Crie uma comunidade</Button>
         </div>;
     }
 

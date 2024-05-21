@@ -1,6 +1,7 @@
-import { Doc } from "@/convex/_generated/dataModel";
-import { PostCard } from "./post-card";
-import { CommentList } from "./comment-list";
+import { Doc } from '@/convex/_generated/dataModel';
+
+import { CommentList } from './comment-list';
+import { PostCard } from './post-card';
 
 
 interface PostProps {

@@ -79,5 +79,19 @@ body {
 
   body {
     @apply bg-background text-foreground;
+
+    img,
+    svg,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
+    object {
+      display: inline;
+      /* 1 */
+      vertical-align: middle;
+      /* 2 */
+    }
   }
 }

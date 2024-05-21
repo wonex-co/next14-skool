@@ -1,15 +1,16 @@
-"use client";
 
-import { Doc, Id } from "@/convex/_generated/dataModel";
-import { BookCheck, CaseSensitive, ChevronRight, ChevronsRight, Component, Fullscreen, Pen, Plus, Trash2 } from "lucide-react";
-import { useState } from "react";
-import { useMutation, useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
-import { Input } from "@/components/ui/input";
-import { LessonEditorView } from "./_components/lesson-editor-view";
-import { ModuleNameEditor } from "./_components/module-name-editor";
+"use client";
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { api } from '@/convex/_generated/api';
+import { Doc, Id } from '@/convex/_generated/dataModel';
+import { useMutation, useQuery } from 'convex/react';
+import { BookCheck, CaseSensitive, Component, Fullscreen, Plus, Trash2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+
+import { LessonEditorView } from './_components/lesson-editor-view';
+import { ModuleNameEditor } from './_components/module-name-editor';
 
 interface CourseEditPageProps {
     params: {
@@ -18,13 +19,9 @@ interface CourseEditPageProps {
     }
 };
 
-
 const CourseEditPage = ({ params }: CourseEditPageProps) => {
     const course = useQuery(api.courses.get, { id: params.courseId });
     const updateTitle = useMutation(api.courses.updateTitle);
-    // const updateModuleTitle = useMutation(api.modules.updateTitle);
-    const updateDescription = useMutation(api.courses.updateDescription);
-
     const currentUser = useQuery(api.users.currentUser, {});
     const group = useQuery(api.groups.get, { id: params.groupId });
     const router = useRouter();
@@ -33,8 +30,6 @@ const CourseEditPage = ({ params }: CourseEditPageProps) => {
     const addModule = useMutation(api.modules.add);
     const removeLesson = useMutation(api.lessons.remove);
     const removeModule = useMutation(api.modules.remove);
-
-    const [moduleTitle, setModuleTitle] = useState("");
 
     if (!course || Array.isArray(course)) return <div>Loading...</div>;
 
@@ -45,11 +40,6 @@ const CourseEditPage = ({ params }: CourseEditPageProps) => {
     const handleTitleUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
         updateTitle({ title: e.target.value, id: course._id })
     }
-
-    // const handleModuleTitleUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
-    //     console.log(e.target.value);
-    //     updateModuleTitle({ title: e.target.value, id: course._id })
-    // }
 
     const handleAddLesson = (moduleId: Id<"modules">) => {
         addLesson({ moduleId: moduleId });
@@ -63,7 +53,7 @@ const CourseEditPage = ({ params }: CourseEditPageProps) => {
 
     const isOwner = currentUser?._id === group?.ownerId;
 
-    if (!isOwner) return <div>Unauthorized</div>;
+    if (!isOwner) return <div>Não autorizado</div>;
 
     return (
         <div className="flex flex-col md:flex-row h-full w-full gap-4 p-4">
@@ -123,13 +113,13 @@ const CourseEditPage = ({ params }: CourseEditPageProps) => {
 
                         <Button variant={"ghost"} onClick={() => handleAddLesson(module._id)} className="w-full mt-4 flex space-x-2">
                             <Plus className="w-4 h-4" />
-                            <p>Add lesson</p>
+                            <p>Adicionar aula</p>
                         </Button>
                     </div>
                 ))}
                 <Button variant={"outline"} onClick={() => handleAddModule(course._id)} className="w-full mt-4 flex space-x-2 p-0 border-2 text-blue-700">
                     <Plus className="w-4 h-4" />
-                    <p>Add module</p>
+                    <p>Adicionar modulo</p>
                 </Button>
             </div>
             <div className="flex-grow md:w-3/4 rounded-xl bg-gray-50 shadow-md p-4">

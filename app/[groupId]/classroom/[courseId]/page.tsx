@@ -1,9 +1,11 @@
 "use client";
 
-import { Id } from "@/convex/_generated/dataModel";
-import { Curriculum } from "./_components/curriculum";
-import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
+import { api } from '@/convex/_generated/api';
+import { Id } from '@/convex/_generated/dataModel';
+import { useQuery } from 'convex/react';
+
+import { Curriculum } from './_components/curriculum';
+
 
 interface CourseProps {
     params: {

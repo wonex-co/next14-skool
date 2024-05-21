@@ -1,8 +1,9 @@
 "use client";
+import { Id } from '@/convex/_generated/dataModel';
 
-import { Id } from "@/convex/_generated/dataModel";
+import { About } from './_components/join-group-page';
 
-import { About } from "./_components/join-group-page";
+
 
 interface ChatPageProps {
     params: {

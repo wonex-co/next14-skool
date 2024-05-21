@@ -12,7 +12,7 @@ export const add = mutation({
         }
         const lessonId = await ctx.db.insert("modules", {
             courseId,
-            title: "New Module",
+            title: "Nome do Módulo",
         });
         return lessonId;
     },

@@ -1,14 +1,13 @@
 "use client";
 
-import { AboutSide } from "@/components/about-side";
-import { Loading } from "@/components/auth/loading";
-import { Button } from "@/components/ui/button";
-import { api } from "@/convex/_generated/api";
-import { Id } from "@/convex/_generated/dataModel";
-import { useQuery } from "convex/react";
-import { Lock } from "lucide-react";
-import { useRouter } from "next/navigation";
-import { DescriptionEditor } from "../../edit/_components/description-editor";
+import { AboutSide } from '@/components/about-side';
+import { Loading } from '@/components/auth/loading';
+import { api } from '@/convex/_generated/api';
+import { Id } from '@/convex/_generated/dataModel';
+import { useQuery } from 'convex/react';
+import { useRouter } from 'next/navigation';
+
+import { DescriptionEditor } from '../../edit/_components/description-editor';
 
 interface JoinGroupPageProps {
     groupId: Id<"groups">;
@@ -41,16 +40,16 @@ export const About = ({
             <div className="max-w-[650px] bg-white p-8 rounded-lg border border-neutral-200 space-y-10">
                 <h1 className="font-bold text-2xl">{group.name}</h1>
                 {group.aboutUrl && (
-                    <>
-                        <iframe
-                            width="560"
-                            height="315"
-                            src={group.aboutUrl}
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            className="rounded-xl"
-                        />
-                    </>
+
+                    <iframe
+                        width="560"
+                        height="315"
+                        src={group.aboutUrl}
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        className="rounded-xl"
+                    />
+
                 )}
                 <DescriptionEditor
                     editable={false}

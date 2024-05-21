@@ -1,11 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { api } from "@/convex/_generated/api";
-import { Id } from "@/convex/_generated/dataModel";
-import { useApiMutation } from "@/hooks/use-api-mutation";
-import { useMutation } from "convex/react";
-import { useState } from "react";
-import { toast } from "sonner";
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { api } from '@/convex/_generated/api';
+import { Id } from '@/convex/_generated/dataModel';
+import { useApiMutation } from '@/hooks/use-api-mutation';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 interface AddMemberProps {
     groupId: Id<"groups">;
@@ -20,9 +19,9 @@ export const AddMember = ({
         pending
     } = useApiMutation(api.users.addToGroup);
 
-    const handleAddMember = () => {
+    const handleAddMember = async () => {
         try {
-            mutate({
+            await mutate({
                 groupId: groupId,
                 email: email
             });
@@ -34,9 +33,9 @@ export const AddMember = ({
 
     return (
         <div className="w-[450px] m-auto p-3 flex flex-col justify-center">
-            <p>Add a user with email:</p>
+            <p>Adicione um usuario com email:</p>
             <Input value={email} onChange={(e) => setEmail(e.target.value)} />
-            <Button disabled={pending} variant={"ghost"} onClick={handleAddMember}>Add</Button>
+            <Button disabled={pending} variant={"ghost"} onClick={handleAddMember}>Adicionar</Button>
         </div>
     )
 }

@@ -1,10 +1,11 @@
 "use client";
 
-import { api } from "@/convex/_generated/api";
-import { Id } from "@/convex/_generated/dataModel";
-import { useMutation } from "convex/react";
-import { ElementRef, useRef, useState } from "react";
-import TextareaAutosize from "react-textarea-autosize";
+import { api } from '@/convex/_generated/api';
+import { Id } from '@/convex/_generated/dataModel';
+import { useMutation } from 'convex/react';
+import { ElementRef, useRef, useState } from 'react';
+import TextareaAutosize from 'react-textarea-autosize';
+
 
 interface NameEditorProps {
     id: Id<"groups">;

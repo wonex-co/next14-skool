@@ -1,11 +1,12 @@
-import { Doc, Id } from "@/convex/_generated/dataModel";
-import { BookCheck, CaseSensitive, ChevronRight, ChevronsRight, Component, Pen } from "lucide-react";
-import { LessonView } from "./lesson-view";
-import { useState } from "react";
-import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+import { Button } from '@/components/ui/button';
+import { api } from '@/convex/_generated/api';
+import { Doc, Id } from '@/convex/_generated/dataModel';
+import { useQuery } from 'convex/react';
+import { BookCheck, CaseSensitive, Component, Pen } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+
+import { LessonView } from './lesson-view';
 
 interface CurriculumProps {
     course: Doc<"courses"> & {
@@ -35,7 +36,7 @@ export const Curriculum = ({ course, groupId }: CurriculumProps) => {
                 {isOwner && (
                     <Button onClick={handleEditClick} variant={"secondary"} className="text-zinc-600 text-sm space-x-3 mb-10">
                         <Pen className="w-4 h-4" />
-                        <p>Edit Course</p>
+                        <p>Editar Curso</p>
                     </Button>
                 )}
                 <div className="flex items-center mb-6 space-x-3">
