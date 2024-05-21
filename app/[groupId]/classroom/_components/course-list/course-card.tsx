@@ -28,8 +28,8 @@ export const CourseCard = ({
             className="h-fit w-[360px] rounded-xl cursor-pointer bg-zinc-100 hover:shadow-[0_2px_2px_2px_rgba(0,0,0,0.3)]"
             onClick={handleClick}
         >
-            <div className="h-[200px] relative">
-                <Image src="/logo.svg" fill alt={title} objectFit="cover" />
+            <div className="h-[200px] relative text-center">
+                <Image src="/icon.svg" width={200} height={200} alt={title} objectFit="cover" />
             </div>
             <div className="flex flex-col h-[140px] justify-start p-3">
                 <h3 className="font-bold">{title}</h3>

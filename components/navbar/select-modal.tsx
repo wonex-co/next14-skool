@@ -62,7 +62,7 @@ export const SelectModal = () => {
                     {(group &&
                         <>
                             <Avatar className="w-7 h-7">
-                                <AvatarImage src="https://avatars.githubusercontent.com/u/124599?v=4" />
+                                <AvatarImage src="https://avatars.githubusercontent.com/u/170371738?v=4" />
                                 <AvatarFallback>
                                     {group.name[0]}
                                 </AvatarFallback>
@@ -87,7 +87,7 @@ export const SelectModal = () => {
                     {groups?.map((group) => (
                         <div className="flex gap-x-2 items-center cursor-pointer hover:bg-zinc-100 p-2 rounded-md" key={group._id} onClick={() => handleSelect(group._id)}>
                             <Avatar className="w-7 h-7">
-                                <AvatarImage src="https://avatars.githubusercontent.com/u/124599?v=4" />
+                                <AvatarImage src="https://avatars.githubusercontent.com/u/170371738?v=4" />
                                 <AvatarFallback>
                                     {group.name[0]}
                                 </AvatarFallback>

@@ -36,7 +36,7 @@ const Create = () => {
                     Criar uma comunidade
                 </h2>
                 <p className=" text-sm">
-                    $ 99/mês. Cancele a qualquer momento sem complicações.
+                    R$19,99/mês. Cancele a qualquer momento sem complicações.
                     Acesse todos os recursos com uso ilimitado e absolutamente sem custos ocultos.
                 </p>
                 <Input
