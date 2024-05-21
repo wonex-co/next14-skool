@@ -22,7 +22,7 @@ import type * as lessons from "../lessons.js";
 import type * as likes from "../likes.js";
 import type * as modules from "../modules.js";
 import type * as posts from "../posts.js";
-import type * as stripe from "../stripe.js";
+import * as Stripe from 'stripe';
 import type * as users from "../users.js";
 
 /**
