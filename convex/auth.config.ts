@@ -1,7 +1,7 @@
 export default {
   providers: [
     {
-      domain: "https://clerk.rekreio.com.br/",
+      domain: process.env.CLERK_JWT_ISSUER_DOMAIN,
       applicationID: "convex",
     },
   ]
