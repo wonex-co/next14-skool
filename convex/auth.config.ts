@@ -1,7 +1,7 @@
 export default {
   providers: [
     {
-      domain: "https://major-tahr-46.clerk.accounts.dev/",
+      domain: "https://clerk.rekreio.com.br/",
       applicationID: "convex",
     },
   ]
